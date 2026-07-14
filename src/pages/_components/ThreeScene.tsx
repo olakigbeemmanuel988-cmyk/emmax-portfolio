@@ -12,10 +12,10 @@ function FloatingSphere({ position, color, scale }: { position: [number, number,
     }
   });
   return (
-    <Float speed={0.8} rotationIntensity={0.2} floatIntensity={0.6}>
+    <Float speed={1.5} rotationIntensity={0.3} floatIntensity={0.5}>
       <mesh ref={meshRef} position={position} scale={scale}>
-        <icosahedronGeometry args={[1, 1]} />
-        <MeshDistortMaterial color={color} distort={0.15} speed={1.2} roughness={0.3} metalness={0.6} opacity={0.35} transparent />
+        <sphereGeometry args={[1, 64, 64]} />
+        <MeshDistortMaterial color={color} distort={0.35} speed={2} roughness={0.1} metalness={0.8} transparent opacity={0.85} />
       </mesh>
     </Float>
   );
@@ -31,8 +31,8 @@ function WireframeTorus({ position }: { position: [number, number, number] }) {
   });
   return (
     <mesh ref={meshRef} position={position}>
-      <torusGeometry args={[1.4, 0.25, 16, 80]} />
-      <meshStandardMaterial color="#7c3aed" wireframe emissive="#7c3aed" emissiveIntensity={0.15} opacity={0.25} transparent />
+      <torusGeometry args={[1.8, 0.03, 16, 100]} />
+      <meshBasicMaterial color="#7c3aed" wireframe />
     </mesh>
   );
 }
@@ -42,15 +42,16 @@ export default function ThreeScene() {
   useEffect(() => { setMounted(true); }, []);
   if (!mounted) return null;
   return (
-    <Canvas camera={{ position: [0, 0, 9], fov: 55 }} style={{ position: 'absolute', inset: 0 }} gl={{ alpha: true, antialias: true }}>
-      <ambientLight intensity={0.15} />
-      <pointLight position={[8, 8, 8]} color="#7c3aed" intensity={0.8} />
-      <pointLight position={[-8, -6, -6]} color="#06b6d4" intensity={0.6} />
-      <Stars radius={120} depth={60} count={1800} factor={3} saturation={0} fade speed={0.4} />
-      <FloatingSphere position={[-4.5, 1.2, -4]} color="#7c3aed" scale={0.8} />
-      <FloatingSphere position={[4.5, -1.2, -5]} color="#06b6d4" scale={0.65} />
-      <FloatingSphere position={[2.5, 2.8, -6]} color="#a855f7" scale={0.4} />
-      <WireframeTorus position={[0, 0, -7]} />
+    <Canvas camera={{ position: [0, 0, 8], fov: 60 }} style={{ position: 'absolute', inset: 0 }}>
+      <ambientLight intensity={0.3} />
+      <pointLight position={[5, 5, 5]} intensity={1.5} color="#7c3aed" />
+      <pointLight position={[-5, -5, 5]} intensity={1} color="#06b6d4" />
+      <Stars radius={80} depth={50} count={3000} factor={4} saturation={0} fade />
+      <FloatingSphere position={[-3.5, 1, -2]} color="#7c3aed" scale={1.2} />
+      <FloatingSphere position={[4, -1.5, -3]} color="#06b6d4" scale={0.9} />
+      <FloatingSphere position={[0, 2.5, -4]} color="#a855f7" scale={0.6} />
+      <WireframeTorus position={[2, 1, -1]} />
+      <WireframeTorus position={[-2, -2, -2]} />
     </Canvas>
   );
 }

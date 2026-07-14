@@ -14,7 +14,7 @@ import WhatsAppButton from './_components/WhatsAppButton.tsx';
 
 export default function Index() {
   return (
-    <div className="min-h-screen bg-background text-foreground overflow-x-hidden">
+    <div className="min-h-screen bg-background overflow-x-hidden">
       <Navbar />
       <Hero />
       <Stats />

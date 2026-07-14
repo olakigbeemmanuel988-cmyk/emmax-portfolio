@@ -3,26 +3,44 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Emmax | Digital Marketing, Websites & E-commerce</title>
-    <meta name="description" content="Emmax - Digital Marketing Specialist, Website Developer & E-commerce Expert helping businesses grow online." />
+
+    <title>Emmax | Digital Marketing, Website Development & E-commerce</title>
+    <meta name="description" content="Emmax - Digital Marketing Specialist, Website Developer and E-commerce Expert helping businesses grow online." />
     <meta name="author" content="Emmax" />
-    <link rel="icon" type="image/jpeg" href="https://hercules-cdn.com/file_bGVX7VGUeXQzjzAvmGB7sU5V" />
-    <meta property="og:title" content="Emmax | Digital Marketing, Websites & E-commerce" />
-    <meta property="og:description" content="Emmax - Digital Marketing Specialist, Website Developer & E-commerce Expert helping businesses grow online." />
+    <link
+      rel="icon"
+      type="image/svg+xml"
+      href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚡</text></svg>"
+    />
+
+    <meta property="og:title" content="Emmax | Digital Marketing & E-commerce Expert" />
+    <meta property="og:description" content="Emmax - Digital Marketing Specialist, Website Developer and E-commerce Expert helping businesses grow online." />
     <meta property="og:type" content="website" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@usehercules" />
+
+    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap" rel="stylesheet" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&family=Syne:wght@400..800&display=swap"
+      rel="stylesheet"
+      crossorigin
+    />
+
+    <!-- Detect dark mode preference -->
     <script>
       try {
-        let theme = localStorage.getItem('theme');
-        if (theme === 'system' || !theme) {
-          let prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-          theme = prefersDark ? 'dark' : 'light';
+        let theme = localStorage.getItem("theme");
+        if (theme === "system" || !theme) {
+          let prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+          theme = prefersDark ? "dark" : "light";
         }
         document.documentElement.classList.add(theme);
       } catch (e) {}
     </script>
+
     <link href="/src/index.css" rel="stylesheet" />
   </head>
   <body>
