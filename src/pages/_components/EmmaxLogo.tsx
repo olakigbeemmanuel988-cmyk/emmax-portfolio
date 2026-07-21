@@ -6,21 +6,21 @@ export default function EmmaxLogo({
   size?: "default" | "large" | "small";
 }) {
   const scale =
-    size === "large" ? 1.4 : size === "small" ? 0.75 : 1;
+    size === "large" ? 1.35 : size === "small" ? 0.75 : 1;
 
-  const logoHeight = Math.round(55 * scale);
+  const height = Math.round(58 * scale);
 
   return (
-    <div className={`flex items-center ${className}`}>
-      <img
-        src="/logo.png"
-        alt="EMMAX Logo"
-        style={{
-          height: `${logoHeight}px`,
-          width: "auto",
-          objectFit: "contain",
-        }}
-      />
-    </div>
+    <img
+      src="/logo.png"
+      alt="EMMAX"
+      className={className}
+      style={{
+        height: `${height}px`,
+        width: "auto",
+        display: "block",
+        objectFit: "contain",
+      }}
+    />
   );
 }
