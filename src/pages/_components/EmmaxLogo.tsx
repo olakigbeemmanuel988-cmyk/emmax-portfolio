@@ -1,12 +1,3 @@
-<img
-  src="/logo.png"
-  alt="EMMAX Logo"
-  style={{
-    height: `${iconSize}px`,
-    width: "auto",
-  }}
-/>
-
 export default function EmmaxLogo({
   className = "",
   size = "default",
@@ -22,8 +13,8 @@ export default function EmmaxLogo({
   return (
     <div className={`flex items-center ${className}`}>
       <img
-        src={logo}
-        alt="EMMAX"
+        src="/logo.png"
+        alt="EMMAX Logo"
         style={{
           height: `${logoHeight}px`,
           width: "auto",
