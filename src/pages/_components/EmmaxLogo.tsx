@@ -1,4 +1,11 @@
-import logo from "../../assets/logo.png";
+<img
+  src="/logo.png"
+  alt="EMMAX Logo"
+  style={{
+    height: `${iconSize}px`,
+    width: "auto",
+  }}
+/>
 
 export default function EmmaxLogo({
   className = "",
