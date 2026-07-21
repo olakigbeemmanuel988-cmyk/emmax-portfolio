@@ -1,6 +1,6 @@
 import { motion } from 'motion/react';
 
-const WHATSAPP_URL = 'https://wa.me/2349049078503?text=' + encodeURIComponent("Hi Emmax! I'd like to discuss a project.");
+const WHATSAPP_URL = 'https://wa.me/2349057952035?text=' + encodeURIComponent("Hi Emmax! I'd like to discuss a project.");
 
 export default function WhatsAppButton() {
   return (
