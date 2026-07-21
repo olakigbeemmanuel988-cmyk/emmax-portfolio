@@ -5,7 +5,7 @@ import { MessageCircle, Mail, MapPin, Clock, Send, CheckCircle } from 'lucide-re
 const WHATSAPP_URL = 'https://wa.me/2349049078503?text=' + encodeURIComponent("Hi Emmax! I'd like to discuss a project.");
 
 const contactInfo = [
-  { icon: MessageCircle, label: 'WhatsApp', value: '+234 904 907 8503', href: WHATSAPP_URL, color: 'text-emerald-400' },
+  { icon: MessageCircle, label: 'WhatsApp', value: '+234 9057952035', href: WHATSAPP_URL, color: 'text-emerald-400' },
   { icon: Mail, label: 'Email', value: 'emmax.digitalcoach@gmail.com', href: 'mailto:emmax.digitalcoach@gmail.com', color: 'text-primary' },
   { icon: MapPin, label: 'Location', value: 'Nigeria (Remote Worldwide)', href: null, color: 'text-accent' },
   { icon: Clock, label: 'Response Time', value: 'Within 24 hours', href: null, color: 'text-purple-400' },
