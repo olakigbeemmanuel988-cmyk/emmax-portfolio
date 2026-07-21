@@ -1,3 +1,4 @@
+import logo from "../../assets/logo.png";
 export default function EmmaxLogo({ className = '', size = 'default' }: { className?: string; size?: 'default' | 'large' | 'small' }) {
   const scale = size === 'large' ? 1.4 : size === 'small' ? 0.75 : 1;
   const iconSize = Math.round(44 * scale);
@@ -9,8 +10,9 @@ export default function EmmaxLogo({ className = '', size = 'default' }: { classN
     <div className={`flex items-center ${className}`} style={{ gap }}>
   
     <img
-      src="/logo.png"
-      alt="EMMAX Logo"
+      <img
+  src={logo}
+  alt="EMMAX Logo"
       style={{
         height: `${iconSize}px`,
         width: "auto"
